@@ -1,24 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SocialLinks from "../components/SocialLinks.astro";
 ---
 <Layout title="Mon Portfolio - Développeur">
 	<div class="text-center py-10">
-		<!-- Avatar/Photo -->
+		<!-- Avatar -->
 		<div class="w-32 h-32 bg-linear-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-6 flex items-center justify-center text-5xl font-bold text-white shadow-xl">
 			👨‍💻
 		</div>
 
 		<h1 class="text-5xl font-extrabold mb-4">
-			Bonjour, je suis <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-purple-400">[Ton Nom]</span>
+			Bonjour, je suis <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-purple-400">Mokaere</span>
 		</h1>
 
 		<p class="text-xl text-gray-300 max-w-2xl mx-auto mb-6">
-			Développeur passionné par la création d'applications web performantes,
+			Un développeur passionné par la création d'applications web performantes,
 			élégantes et centrées sur l'utilisateur.
 		</p>
 
-		<!-- Liste des technos (badges) -->
-		<div class="flex flex-wrap justify-center gap-2 mb-8">
+		<!-- Badges technos -->
+		<div class="flex flex-wrap justify-center gap-2 mb-10">
 			<span class="bg-gray-800 px-4 py-2 rounded-full text-sm border border-gray-700">⚛️ React</span>
 			<span class="bg-gray-800 px-4 py-2 rounded-full text-sm border border-gray-700">🟢 Node.js</span>
 			<span class="bg-gray-800 px-4 py-2 rounded-full text-sm border border-gray-700">🐍 Python</span>
@@ -26,9 +27,12 @@ import Layout from "../layouts/Layout.astro";
 			<span class="bg-gray-800 px-4 py-2 rounded-full text-sm border border-gray-700">🐘 PostgreSQL</span>
 		</div>
 
-		<!-- Bouton vers les projets -->
-		<a href="/projects" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full transition shadow-lg shadow-blue-600/20">
-			Voir mes projets →
-		</a>
+		<SocialLinks />
+
+		<div class="mt-12">
+			<a href="/projects" class="text-sm text-gray-500 hover:text-blue-400 transition border-t border-gray-800 pt-6 inline-block">
+				⚡ Voir l'avancement de mes projets →
+			</a>
+		</div>
 	</div>
 </Layout>
