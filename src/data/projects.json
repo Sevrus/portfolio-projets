@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "name": "Mon Super SaaS",
+    "category": "Fullstack",
+    "image": "https://picsum.photos/seed/saas/600/300",
+    "description": "Une app pour gérer ses finances perso.",
+    "tasks": [
+      { "name": "Maquette Figma", "done": true },
+      { "name": "Base de données PostgreSQL", "done": true },
+      { "name": "Authentification JWT", "done": false },
+      { "name": "Dashboard client", "done": false },
+      { "name": "Mise en prod", "done": false }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "API de Météo",
+    "category": "Backend",
+    "image": "https://picsum.photos/seed/weather/600/300",
+    "description": "Web scraper + API REST avec cache Redis.",
+    "tasks": [
+      { "name": "Scraping des données", "done": true },
+      { "name": "Création des routes Express", "done": true },
+      { "name": "Mise en cache Redis", "done": false }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Portfolio Interactif",
+    "category": "Frontend",
+    "image": "https://picsum.photos/seed/portfolio/600/300",
+    "description": "Mon site personnel avec animations 3D.",
+    "tasks": [
+      { "name": "Design UI/UX", "done": true },
+      { "name": "Intégration Tailwind", "done": true },
+      { "name": "Animations Three.js", "done": false }
+    ]
+  }
+]
