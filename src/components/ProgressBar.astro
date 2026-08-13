@@ -1,3 +1,34 @@
 ---
+export interface Props {
+    tasks: Array<{ name: string; done: boolean }>;
+}
+const { tasks } = Astro.props;
 
+const total = tasks.length;
+const doneCount = tasks.filter(t => t.done).length;
+const progress = total === 0 ? 0 : Math.round((doneCount / total) * 100);
 ---
+<div class="w-full">
+    <!-- Liste des tâches -->
+    <ul class="space-y-2 mb-3">
+        {tasks.map((task) => (
+                <li class="flex items-center gap-2 text-sm text-gray-300">
+                    <span class="text-lg">{task.done ? '✅' : '⬜'}</span>
+                    <span class={task.done ? 'line-through text-gray-500' : ''}>
+          {task.name}
+        </span>
+                </li>
+        ))}
+    </ul>
+
+    <!-- Barre de progression -->
+    <div class="relative w-full h-6 bg-gray-700 rounded-full overflow-hidden shadow-inner">
+        <div
+                class="h-full bg-linear-to-r from-blue-500 to-purple-500 transition-all duration-500 ease-out rounded-full flex items-center justify-end pr-2 text-xs font-bold text-white"
+                style={`width: ${progress}%`}
+        >
+            {progress > 10 ? `${progress}%` : ''}
+        </div>
+    </div>
+    <p class="text-right text-xs text-gray-500 mt-1">{doneCount} / {total} tâches terminées</p>
+</div>
