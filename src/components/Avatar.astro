@@ -1,0 +1,29 @@
+---
+export interface Props {
+    emoji?: string;
+    size?: "sm" | "md" | "lg";
+    src?: string;
+    alt?: string;
+}
+
+const { emoji = "👨‍💻", size = "md", src, alt = "Avatar" } = Astro.props;
+
+const sizeClasses = {
+    sm: "w-16 h-16 text-2xl",
+    md: "w-32 h-32 text-5xl",
+    lg: "w-48 h-48 text-7xl",
+};
+---
+{
+    src ? (
+    <img
+            src={src}
+            alt={alt}
+            class={`${sizeClasses[size]} rounded-full object-cover shadow-xl border-2 border-blue-500/30`}
+    />
+        ) : (
+    <div class={`${sizeClasses[size]} bg-linear-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center font-bold text-white shadow-xl`}>
+        {emoji}
+    </div>
+        )
+}
