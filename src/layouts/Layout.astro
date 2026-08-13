@@ -15,9 +15,15 @@ const { title } = Astro.props;
 </head>
 <body class="bg-gray-900 text-white font-sans antialiased min-h-screen p-8">
 <div class="max-w-4xl mx-auto">
-    <h1 class="text-4xl font-bold mb-2 text-blue-400">🚀 Mes Projets</h1>
-    <p class="text-gray-400 mb-8">Suivi de l'avancement de mes roadmaps</p>
+
+    <!-- Navigation commune à toutes les pages -->
+    <nav class="flex gap-6 mb-10 text-gray-400 font-medium border-b border-gray-800 pb-4">
+        <a href="/" class="hover:text-blue-400 transition">🏠 Accueil</a>
+        <a href="/projects" class="hover:text-blue-400 transition">📂 Projets</a>
+    </nav>
+
     <slot />
+
 </div>
 </body>
 </html>

@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import projects from "../data/projects.json";
+---
+<Layout title="Mes Projets - Roadmaps">
+
+    <h1 class="text-4xl font-bold mb-2 text-blue-400">🚀 Mes Projets</h1>
+    <p class="text-gray-400 mb-8">Suivi de l'avancement de mes roadmaps</p>
+
+    <div class="space-y-6">
+        {projects.map((project) => (
+                <ProjectCard project={project} />
+        ))}
+    </div>
+</Layout>
