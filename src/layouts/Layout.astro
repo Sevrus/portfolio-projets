@@ -1,3 +1,21 @@
 ---
-
+export interface Props {
+    title: string;
+}
+const { title } = Astro.props;
 ---
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+</head>
+<body class="bg-gray-900 text-white font-sans antialiased min-h-screen p-8">
+<div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold mb-2 text-blue-400">🚀 Mes Projets</h1>
+    <p class="text-gray-400 mb-8">Suivi de l'avancement de mes roadmaps</p>
+    <slot />
+</div>
+</body>
+</html>
